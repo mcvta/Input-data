@@ -1,0 +1,611 @@
+ CE-QUAL-W2 preprocessor - V3.6
+
+ Version 3.6                                                             
+ CE-QUAL-W2                                                              
+ Albufeira 1 ramo                                                        
+ Default hydraulic coefficients                                          
+ Default light absorption/extinction coeffients                          
+ Albufeira                                                               
+ Simulação ANO 2008                                                      
+ GDHI, FCT/UNL OUtubro de 2011                                           
+                                                                         
+                                                                         
+
+ Time Control
+   Starting time (Julian day) [TMSTRT] =    1.00
+   Ending time (Julian day)    [TMEND] = 7306.00
+   Year                         [YEAR] =    1989
+   # Timestep intervals         [NDLT] =       1
+   Minimum timestep (sec)     [DLTMIN] =     1.0
+   Timestep day (Julian day)    [DLTD] =     1.0
+   Maximum timestep (sec)     [DLTMAX] =  3600.0
+   Fraction of timestep         [DLTF] =    0.80
+   Timestep limitation
+     Waterbody 1
+       Vertical eddy viscosity    [VISC] =  ON
+       Internal gravity wave      [CELC] =  ON
+
+ Initial Conditions
+   Waterbody 1
+     Temperature      [T2I] =   8.7 øC
+     Water type    [WTYPEC] = FRESH water
+     Ice thickness   [ICEI] = 0.000 m
+
+ Calculations
+   Waterbody 1
+     Evaporation     [EVC] = OFF
+     Precipitation   [PRC] = OFF
+     Volume balance  [VBC] = OFF
+     Energy balance  [EBC] = OFF
+     Mass balance    [MBC] = OFF
+     Place inflows   [PQC] = OFF
+     Wind          [WINDC] =  ON
+     Inflow         [QINC] =  ON
+     Outflow       [QOUTC] =  ON
+     Heat exchange [HEATC] =  ON
+     Heat exchange [SLHTC] = TERM
+   Waterbody 1
+     read radiation               [SROC] =     OFF
+     wind function coefficient a   [AFW] =    9.20
+     wind function coefficient b   [BFW] =    0.46
+     wind function coefficient c   [CFW] =    2.00
+     wind height                 [WINDH] =   10.00
+     Ryan-Harleman evaporation   [RHEVC] =     OFF
+
+ Input Interpolations
+   Branch 1
+     Inflow                [QINIC] = OFF
+     Distributed tributary [DTRIC] = OFF
+     Head boundary          [HDIC] = OFF
+   Waterbody 1
+     Meteorology           [METIC] =  ON
+   Branch 1
+     Structure 1           [STRIC] = OFF
+     Structure 2           [STRIC] = OFF
+     Withdrawal 1            [WDIC] = OFF
+ Meteorological Parameters
+   Waterbody 1
+     Latitude                  [LAT] =   40.02
+     Longitude                [LONG] =   -7.00
+   Axis orientation
+     Segment #         2    3    4    5    6    7    8    9
+     [PHI0] (rads)  5.50 5.79 5.62 5.57 5.41 6.21 6.21 6.21
+
+ Transport Solution
+   Waterbody 1
+     Transport [SLTRC] = ULTIMATE
+     Theta     [THETA] =     0.55
+
+ Hydraulic coefficients
+   Waterbody 1
+   Longitudinal eddy viscosity           [AX] =     1.00 m^2/sec
+   Longitudinal eddy diffusivity         [DX] =     1.00 m^2/sec
+   Sediment temperature                [TSED] =    12.80 øC
+   Coefficient of bottom heat exchange [CBHE] = 3.00E-01 øC m/s
+
+ Ice cover
+   Waterbody 1
+     Ice calculations          [ICEC] =      OFF
+     Solution                [SLICEC] =   DETAIL
+     Albedo                  [ALBEDO] =     0.25
+     Ice-water heat exchange    [HWI] =    10.00
+     Light absorption         [BETAI] =     0.60
+     Light decay             [GAMMAI] =     0.07
+
+ Output Control
+   Waterbody 1
+     Timestep violations [NVIOL]               = OFF
+     Horizontal velocity [U], m/s              = OFF
+     Vertical velocity [W], m/s                = OFF
+     Temperature [T1], <o/>C                   =  ON
+     Density [RHO], g/m^3                      = OFF
+     Vertical eddy viscosity [AZ], m^2/s       = OFF
+     Velocity shear stress [SHEAR], 1/s^2      = OFF
+     Internal shear [ST], m^3/s                = OFF
+     Bottom shear [SB], m^3/s                  = OFF
+     Longitudinal momentum [ADMX], m^3/s       = OFF
+     Longitudinal momentum [DM], m^3/s         = OFF
+     Horizontal density gradient [HDG], m^3/s  = OFF
+     Vertical momentum [ADMZ], m^3/s           = OFF
+     Horizontal pressure gradient [HPG], m^3/s = OFF
+     Gravity term channel slope [GRAV], m^3/s  = OFF
+   Waterbody 1
+     Snapshot         [SNPC] = OFF
+     Screen           [SCRC] =  ON
+       Number of time intervals [NSCR] =      1
+       Date  (Julian day)       [SCRD] =   1.00
+       Frequency  (days)        [SCRF] =   0.50
+     Fluxes           [FLXC] = OFF
+     Vector plot      [VPLC] = OFF
+     Profile plot     [PRFC] = OFF
+     Spreadsheet plot [SPRC] = OFF
+     Contour plot     [CPLC] = OFF
+     Time series      [TSRC] = OFF
+     Restart out      [RSOC] = OFF
+     Restart in       [RSIC] = OFF
+
+Inflow/Outflow
+   Selective Withdrawal
+     Branch    # of structures [NSTR]
+        1                2
+     Branch 1
+       Structure   Type   Width (m)   Elevation (m)   Bottom Layer
+           1       POINT      0.0        516.0             5
+           2       POINT      0.0        508.0             9
+   Number of withdrawals [NWD] = 1
+     segment number [IWD] =   9
+   Number of tributaries [NTR] = 0
+   Distributed tributaries [DTRC]
+     Branch 1 = OFF
+
+ Input Filenames
+   Control    = w2_con.npt                                                              
+   Restart    = rsi.npt - not used                                                      
+   Withdrawal = qwd.npt                                                                 
+   Waterbody 1
+     Bathymetry           = bth.npt                                                                 
+     Meteorology          = met_wb1.npt                                                             
+     Vertical profile     = vpr_wb1.npt - not used                                                  
+     Longitudinal profile = lpr_wb1.npt - not used                                                  
+   Branch 1
+     Inflow                               = qin_br1.npt                                                             
+     Inflow temperature                   = tin_br1.npt                                                             
+     Inflow concentrations                = cin_br1.npt                                                             
+     Outflow                              = qot_br1.npt                                                             
+     Distributed tributary inflows        = qdt_br1.npt                                                             
+     Distributed tributary temperatures   = tdt_br1.npt                                                             
+     Distributed tributary concentrations = cdt_br1.npt                                                             
+     Precipitation                        = pre_br1.npt - not used                                                  
+     Precipitation temperatures           = tpr_br1.npt - not used                                                  
+     Precipitation concentrations         = cpr_br1.npt - not used                                                  
+     Upstream head                        = euh_br1.npt - not used                                                  
+     Upstream head temperatures           = tuh_br1.npt - not used                                                  
+     Upstream head concentrations         = cuh_br1.npt - not used                                                  
+     Downstream head                      = edh_br1.npt - not used                                                  
+     Downstream head temperatures         = tdh_br1.npt - not used                                                  
+     Downstream head concentrations       = cdh_br1.npt - not used                                                  
+
+ Output Filenames
+   Error       = pre.err                                                                 
+   Warning     = pre.wrn                                                                 
+   Time series = tsr.opt - not used                                                      
+   Withdrawal  = wdo.opt - not used                                                      
+   Waterbody 1
+     Snapshot     = snp_wb1.opt                                                             
+     Fluxes       = kfl_wb1.opt                                                             
+     Profile      = prf_wb1.opt - not used                                                  
+     Vector plot  = vpl_wb1.opt                                                             
+     Contour plot = cpl_wb1.opt - not used                                                  
+
+ Constituents [CCC] =  ON
+   Algal limiting nutrient  [LIMC] =  ON
+   Kinetics update frequency [CUF] =   9
+
+   Waterbody 1
+     State Variables
+       Constituent          Computation  Initial Conc   Fluxes    Printout
+         [CNAME]               [CAC]     [C2IWB,g/m^3]  [CFWBC]   [CPRWBC]
+       TDS                       ON          20.800       OFF        ON
+       Tracer                   OFF           0.000       OFF       OFF
+       Residence time           OFF           0.000       OFF       OFF
+       Coliform_1               OFF           0.030       OFF       OFF
+       Coliform_2               OFF           0.180       OFF       OFF
+       ISS                      OFF           0.000       OFF       OFF
+       ISS                      OFF           0.000       OFF       OFF
+       ISS                      OFF           0.000       OFF       OFF
+       Phosphate                 ON           0.001       OFF        ON
+       Ammonium                  ON           0.208       OFF        ON
+       Nitrate-Nitrite           ON           0.234       OFF        ON
+       Dissolved silica         OFF           0.000       OFF       OFF
+       Particulate silica       OFF           0.000       OFF       OFF
+       Total iron               OFF           0.000       OFF       OFF
+       Labile DOM               OFF           0.000       OFF        ON
+       Refractory DOM           OFF           0.000       OFF       OFF
+       Labile POM               OFF           0.000       OFF        ON
+       Refractory POM           OFF           0.000       OFF       OFF
+       CBOD1                     ON           0.530       OFF        ON
+       CBOD2                    OFF           0.000       OFF       OFF
+       CBOD3                    OFF           0.000       OFF       OFF
+       Algae                     ON           0.033       OFF        ON
+       Algae                    OFF           0.000       OFF       OFF
+       Algae                    OFF           0.000       OFF       OFF
+       Dissolved oxygen          ON           9.670       OFF        ON
+       Inorganic carbon          ON           4.500       OFF        ON
+       Alkalinity                ON          13.000       OFF        ON
+       zooplankton1             OFF           0.100       OFF       OFF
+       LDOM P                   OFF           0.001       OFF       OFF
+       RDOM P                   OFF           0.001       OFF       OFF
+       LPOM P                   OFF           0.001       OFF       OFF
+       RPOM P                   OFF           0.001       OFF       OFF
+       LDOM N                   OFF           0.008       OFF       OFF
+       RDOM N                   OFF           0.008       OFF       OFF
+       LPOM N                   OFF           0.008       OFF       OFF
+       RPOM N                   OFF           0.008       OFF       OFF
+       Sediments                 ON           0.000       OFF        ON
+
+   Branch 1
+     State Variables
+       Constituent             Inflow    Distributed trib    Precipitation
+         [CNAME]              [CINBRC]       [CDTBRC]          [CPRBRC]
+       TDS                       ON            OFF                OFF
+       Tracer                   OFF            OFF                OFF
+       Residence time           OFF            OFF                OFF
+       Coliform_1               OFF            OFF                OFF
+       Coliform_2               OFF            OFF                OFF
+       ISS                      OFF            OFF                OFF
+       ISS                      OFF            OFF                OFF
+       ISS                      OFF            OFF                OFF
+       Phosphate                 ON            OFF                OFF
+       Ammonium                  ON            OFF                OFF
+       Nitrate-Nitrite           ON            OFF                OFF
+       Dissolved silica         OFF            OFF                OFF
+       Particulate silica       OFF            OFF                OFF
+       Total iron               OFF            OFF                OFF
+       Labile DOM               OFF            OFF                OFF
+       Refractory DOM           OFF            OFF                OFF
+       Labile POM               OFF            OFF                OFF
+       Refractory POM           OFF            OFF                OFF
+       CBOD1                     ON            OFF                OFF
+       CBOD2                    OFF            OFF                OFF
+       CBOD3                    OFF            OFF                OFF
+       Algae                     ON            OFF                OFF
+       Algae                    OFF            OFF                OFF
+       Algae                    OFF            OFF                OFF
+       Dissolved oxygen          ON            OFF                OFF
+       Inorganic carbon          ON            OFF                OFF
+       Alkalinity                ON            OFF                OFF
+       zooplankton1             OFF            OFF                OFF
+       LDOM P                   OFF            OFF                OFF
+       RDOM P                   OFF            OFF                OFF
+       LPOM P                   OFF            OFF                OFF
+       RPOM P                   OFF            OFF                OFF
+       LDOM N                   OFF            OFF                OFF
+       RDOM N                   OFF            OFF                OFF
+       LPOM N                   OFF            OFF                OFF
+       RPOM N                   OFF            OFF                OFF
+
+     Derived Variables
+                   Constituent               Computation
+                    [CDNAME]                   [CDWBC]
+       Dissolved organic carbon, g/m^3           OFF
+       Particulate organic carbon, g/m^3         OFF
+       Total organic carbon, g/m^3               OFF
+       Dissolved organic nitrogen, g/m^3         OFF
+       Particulate organic nitrogen, g/m^3       OFF
+       Total organic nitrogen, g/m^3             OFF
+       Total Kheldahl Nitrogen, g/m^3            OFF
+       Total nitrogen, g/m^3                      ON
+       Dissolved organic phosphorus, mg/m^3      OFF
+       Particulate organic phosphorus, mg/m^3    OFF
+       Total organic phosphorus, mg/m^3          OFF
+       Total phosphorus, mg/m^3                   ON
+       Algal production, g/m^2/day               OFF
+       Chlorophyll a, mg/m^3                     OFF
+       Total algae, g/m^3                        OFF
+       Oxygen % Gas Saturation                   OFF
+       Total suspended Solids, g/m^3              ON
+       Total Inorganic Suspended Solids,g/m^3    OFF
+       Carbonaceous Ultimate BOD, g/m^3          OFF
+       pH                                         ON
+       CO2                                       OFF
+       HCO3                                      OFF
+       CO3                                       OFF
+
+   Waterbody 1
+     Constituent Rates
+       Constituent             Rate/Coefficient
+         Tracer           Temperature mult     [CGQ10] = 0.000
+                          0-Order Decay        [CG0DK] = 0.000g/m^3/day
+                          1-Order Decay        [CG1DK] = 0.000/day
+                          Settling               [CGS] = 0.000 m/day
+         Residence time   Temperature mult     [CGQ10] = 0.000
+                          0-Order Decay        [CG0DK] =-1.000g/m^3/day
+                          1-Order Decay        [CG1DK] = 0.500/day
+                          Settling               [CGS] = 0.200 m/day
+         Coliform_1       Temperature mult     [CGQ10] = 1.040
+                          0-Order Decay        [CG0DK] = 0.000g/m^3/day
+                          1-Order Decay        [CG1DK] = 0.500/day
+                          Settling               [CGS] =30.000 m/day
+         Coliform_2       Temperature mult     [CGQ10] = 1.040
+                          0-Order Decay        [CG0DK] = 0.000g/m^3/day
+                          1-Order Decay        [CG1DK] = 0.500/day
+                          Settling               [CGS] = 2.000 m/day
+       Suspended solids   Settling               [SSS] = 1.500 m/day
+       Suspended solids   Settling               [SSS] = 1.500 m/day
+       Suspended solids   Settling               [SSS] = 1.500 m/day
+       Labile DOM         Decay               [LDOMDK] = 0.080 /day
+                          to refractory        [LRDDK] = 0.010 /day
+       Refractory DOM     Decay               [RDOMDK] = 0.001 /day
+       Labile POM         Decay               [LPOMDK] = 0.080 /day
+                          to refractory        [LRPDK] = 0.010 /day
+                          Settling              [POMS] = 3.000 m/day
+       Refractory POM     Decay               [RPOMDK] = 0.001 /day
+       Algal group  1     Growth                  [AG] = 1.500 /day
+                          Mortality               [AM] = 0.050 /day
+                          Excretion               [AE] = 0.020 /day
+                          Respiration             [AR] = 0.020 /day
+                          Settling                [AS] = 0.040 m/day
+                          Org-P                 [ALGP] = 0.005
+                          Org-N                 [ALGN] = 0.080
+                          Org-C                 [ALGC] = 0.450
+                          Org-Si               [ALGSI] = 0.180
+                          Algae/chl a ratio    [ACHLA] =  0.06 mg/ug
+                          Fraction algae to POM [APOM] =  0.80
+
+       Algal group  2     Growth                  [AG] = 2.500 /day
+                          Mortality               [AM] = 0.050 /day
+                          Excretion               [AE] = 0.020 /day
+                          Respiration             [AR] = 0.020 /day
+                          Settling                [AS] = 0.100 m/day
+                          Org-P                 [ALGP] = 0.005
+                          Org-N                 [ALGN] = 0.080
+                          Org-C                 [ALGC] = 0.450
+                          Org-Si               [ALGSI] = 0.000
+                          Algae/chl a ratio    [ACHLA] =  0.06 mg/ug
+                          Fraction algae to POM [APOM] =  0.80
+
+       Algal group  3     Growth                  [AG] = 0.500 /day
+                          Mortality               [AM] = 0.010 /day
+                          Excretion               [AE] = 0.020 /day
+                          Respiration             [AR] = 0.020 /day
+                          Settling                [AS] = 0.020 m/day
+                          Org-P                 [ALGP] = 0.005
+                          Org-N                 [ALGN] = 0.080
+                          Org-C                 [ALGC] = 0.450
+                          Org-Si               [ALGSI] = 0.000
+                          Algae/chl a ratio    [ACHLA] =  0.06 mg/ug
+                          Fraction algae to POM [APOM] =  0.80
+
+       Phosphorous        Release            [PO4R] = 0.001 g/m^2/day
+       Ammonium           Decay             [NH4DK] = 0.001 /day
+                          Release            [NH4R] = 0.400 g/m^2/day
+       Nitrate-Nitrite    Decay             [NO3DK] = 0.050 /day
+                          Diffusion to sed  [NO3S] = 0.000 m/day
+                          Frac to OM        [FNO3SED] = 0.370 [-]
+       Silica             Decay             [PSIDK] = 0.100 /day
+                          Release            [DSIR] = 0.300 g/m^2/day
+                          Settling           [PSIS] = 0.000 m/day
+       Sediment           Decay             [SEDDK] = 0.100 /day
+       Iron               Settling            [FES] = 0.000 m/day
+                          Release             [FER] = 0.100 g/m^2/day
+       Oxygen             Sediment demand     [SOD] =   0.5  0.5  0.5  0.5  0.5  0.5  0.5  0.5
+                          SOD fraction       [FSOD] =   1.0
+                          Sediment fraction  [FSED] =   1.0
+                          Sediment focusing  [SEDS] =   0.080 m/day
+                          Sediment burial    [SEDBR] =   0.000 /day
+     Upper Temperature Bounds
+         Constituent   Rate         Upper        Max Upper
+       Ammonium       Decay    [NH4T1] =  5.0 [NH4T2] = 25.0
+       Nitrate        Decay    [NO3T1] =  5.0 [NO3T2] = 25.0
+       Organic        Decay     [OMT1] =  4.0  [OMT2] = 30.0
+       Sediment       Decay    [SEDT1] =  4.0 [SEDT2] = 25.0
+       Algal group 1  Growth     [AT1] =  5.0   [AT2] = 18.0
+       Algal group 2  Growth     [AT1] = 10.0   [AT2] = 30.0
+       Algal group 3  Growth     [AT1] = 10.0   [AT2] = 35.0
+     Lower Temperature Bounds
+         Constituent   Rate         Lower        Max Lower
+       Algal group 1  Growth     [AT3] = 20.0   [AT4] = 24.0
+       Algal group 2  Growth     [AT3] = 35.0   [AT4] = 40.0
+       Algal group 3  Growth     [AT3] = 40.0   [AT4] = 50.0
+     Stoichiometric Equivalence
+       Oxygen
+         Ammonium       [O2NH4] = 4.57
+         Organic matter  [O2OM] = 1.40
+
+         Respiration     [O2AR] = 0.00
+         Algal growth    [O2AG] = 1.10
+         Respiration     [O2AR] = 1.40
+         Algal growth    [O2AG] = 0.00
+         Respiration     [O2AR] = 1.10
+         Algal growth    [O2AG] = 1.40
+         Respiration     [O2AR] = 0.00
+         Algal growth    [O2AG] = 1.10
+         Respiration     [O2AR] = 1.40
+         Algal growth    [O2AG] =
+       Organic Matter
+         Carbon      [BIOC] = 0.450
+         Phosphorous [BIOP] = 0.005
+         Nitrogen    [BION] = 0.080
+         Silica     [BIOSI] = 0.180
+     Half Saturation
+       Algal group 1
+         Phosphorous [AHSP] = 0.003 g/m^3
+         Nitrogen    [AHSN] = 0.014 g/m^3
+         Silica     [AHSSI] = 0.003 g/m^3
+       Algal group 2
+         Phosphorous [AHSP] = 0.003 g/m^3
+         Nitrogen    [AHSN] = 0.014 g/m^3
+         Silica     [AHSSI] = 0.000 g/m^3
+       Algal group 3
+         Phosphorous [AHSP] = 0.003 g/m^3
+         Nitrogen    [AHSN] = 0.010 g/m^3
+         Silica     [AHSSI] = 0.000 g/m^3
+     Light
+       Attenuation
+         Surface layer      [BETA] = 0.70
+         Water             [EXH2O] = 0.25 /m
+         Inorganic solids   [EXSS] = 0.01 /m
+         Organic solids     [EXOM] = 0.01 /m
+         Algal group 1       [EXA] = 0.20 /m
+         Algal group 2       [EXA] = 0.20 /m
+         Algal group 3       [EXA] = 0.20 /m
+       Saturation Intensity
+         Algal group 1 [ASAT] =  50.0 W/m^2
+         Algal group 2 [ASAT] =  75.0 W/m^2
+         Algal group 3 [ASAT] = 100.0 W/m^2
+     Diffusion
+       Oxygen          [DMO2] = 2.040E-09 m^2/g
+       Carbon dioxide [DMCO2] = 1.630E-09 m^2/g
+     Partitioning Coefficients
+       Phosphorous [PARTP] = 0.000 m^3/g
+       Silica     [PARTSI] = 0.200 m^3/g
+     Miscellaneous Constants
+       Half-saturation coeff anoxia[KDO] =  0.10 g/m^3
+       CO2 sediment release       [CO2R] =  0.10 g/m^2/day
+     CBOD 1
+       Decay rate                   [KBOD] = 0.250 /day
+       Temperature adjustment       [TBOD] = 1.015
+       Ultimate CBOD to CBOD5 ratio [RBOD] = 1.850
+     CBOD 2
+       Decay rate                   [KBOD] = 0.250 /day
+       Temperature adjustment       [TBOD] = 1.015
+       Ultimate CBOD to CBOD5 ratio [RBOD] = 1.850
+     CBOD 3
+       Decay rate                   [KBOD] = 0.250 /day
+       Temperature adjustment       [TBOD] = 1.015
+       Ultimate CBOD to CBOD5 ratio [RBOD] = 1.850
+
+  Inflow Constituent Statistics
+    Branch 1
+       Constituent name        Average     Maximum     Minimum ApproxLoading(kg/d)
+       TDS                      26.070      70.850      15.600   0.11115E+03
+       Phosphate                 0.022       0.440       0.000   0.71346E-01
+       Ammonium                  0.097       0.540       0.000   0.43337E+00
+       Nitrate-Nitrite           0.522       1.580       0.010   0.23399E+01
+       CBOD1                     2.115       4.000       0.290   0.89964E+01
+       Algae                     0.072       0.230       0.000   0.33845E+00
+       Dissolved oxygen          8.749      12.220       5.600   0.37029E+02
+       Inorganic carbon          4.732       5.000       3.000   0.19396E+02
+       Alkalinity               13.718      15.000       8.430   0.56186E+02
+    Overall approx loading for all inflows, tributaries, and distributed tributaries
+       Constituent name      ApproxLoading(kg/d)
+       TDS                   0.11115E+03
+       Phosphate             0.71346E-01
+       Ammonium              0.43337E+00
+       Nitrate-Nitrite       0.23399E+01
+       CBOD1                 0.89964E+01
+       Algae                 0.33845E+00
+       Dissolved oxygen      0.37029E+02
+       Inorganic carbon      0.19396E+02
+       Alkalinity            0.56186E+02
+
+ Water Balance Summary
+   Waterbody 1
+      total inflows     total outflows
+    average  maximum   average  maximum
+       0.05     0.32      0.05     0.35
+
+     Branch 1
+       Inflows
+              total
+         average  maximum
+             0.05     0.32
+             upstream         tributaries     distributed tributaries     precipitation
+         average  maximum   average  maximum      average  maximum      average  maximum
+            0.05     0.32      0.00     0.00         0.00     0.00         0.00     0.00
+       Outflows
+              outlets         withdrawals
+         average  maximum   average  maximum
+            0.00     0.00      0.05     0.35
+
+Geometry
+   Overall Grid
+     Total
+       segments [IMX] = 10
+       layers   [KMX] = 10
+       branches [NBR] = 1
+
+   Waterbody 1
+     Segments                 = 1-10
+     Branches                 = 1-1
+     Bottom elevation [ELBOT] =   506.00 m
+     Surface layer       [KT] =        7
+     Vertical spacing     [H]
+       Layer          1    2    3    4    5    6    7    8    9   10
+       Height (m)   2.0  2.0  2.0  2.0  2.0  2.0  2.0  2.0  2.0  2.0
+     Branch 1
+       Upstream segment       [US] = 2     Downstream segment       [DS] = 9
+       Upstream head segment [UHS] = 0     Downstream head segment [DHS] = 0
+
+ Waterbody 1 Initial Volume [VOLG] = 711021.9 m^3
+
+                                 Waterbody 1 Volume-Area-Elevation Table
+                                 Note: Elevation is at top of layer
+
+ Layer     Elevation      Area        Volume   Active Cells  Average depth  Average width  Residence time
+              (m)      (1.0E6 m^2)  (1.0E6 m^3)                  (m)             (m)           (days)
+
+   2        522.00        0.209           2.264     57           10.8           137.98            543.44
+   3        520.00        0.194           1.845     49            9.5           127.65            442.88
+   4        518.00        0.177           1.458     41            8.2           116.62            349.86
+   5        516.00        0.155           1.103     33            7.1           102.40            264.87
+   6        514.00        0.125           0.793     25            6.3            82.44            190.25
+   7 KT     512.00        0.102           0.542     17            5.3            67.36            130.17
+   8        510.00        0.087           0.338      9            3.9            57.03             81.08
+   9        508.00        0.082           0.165      4            2.0            54.23             39.52
+        Waterbody 1 Bathymetry [B], m
+
+                2         3         4         5         6         7         8         9
+             1518      1328      1138       948       759       569       379       189
+   1            0.        0.        0.        0.        0.        0.        0.        0.
+   2           28.       74.      104.      152.      176.      164.      218.      187.
+   3           23.       62.       88.      129.      158.      164.      215.      183.
+   4           19.       49.       70.      104.      139.      163.      212.      177.
+   5           13.       35.       50.       75.      116.      158.      204.      168.
+   6            8.       20.       28.       44.       87.      143.      182.      148.
+   7 KT         5.        6.        9.       17.       63.      134.      169.      134.
+   8            0.        0.        0.       17.       57.      120.      145.      117.
+   9            0.        0.        0.        0.       57.      118.      144.      115.
+  10            0.        0.        0.        0.        0.        0.        0.        0.
+
+
+     Water Surface [Z],
+
+
+
+
+  Temperature [T1], <o/>C            
+
+
+
+     TDS, g/m^3                           
+
+
+
+     Phosphate, g/m^3                     
+
+
+
+     Ammonium, g/m^3                      
+
+
+
+     Nitrate-Nitrite, g/m^3               
+
+
+
+     CBOD1, g/m^3                         
+
+
+
+     Algae, g/m^3                         
+
+
+
+     Dissolved oxygen, g/m^3              
+
+
+
+     Inorganic carbon, g/m^3              
+
+
+
+     Alkalinity, g/m^3                    
+
+
+
+     Total nitrogen, g/m^3                      
+
+
+
+     Total phosphorus, mg/m^3                   
+
+
+
+     Total suspended Solids, g/m^3              
+
+
+
+     pH                                         
+
+
