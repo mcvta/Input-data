@@ -1,0 +1,12 @@
+Computational warning at Julian day = 1.183 at segment 36
+timestep = 18.069 water surface deviation [Z] = 52.300 m  layer thickness = -50.300 m
+Negative surface layer thickness in segment 36
+  time step reduced to 1.000 s on day 1.183 at iteration 351
+Computational warning at Julian day = 1.183
+ timestep = 0.800 sec
+Computational warning at Julian day = 1.183 at segment 37
+timestep = 1.210 water surface deviation [Z] = 2.052 m  layer thickness = -0.052 m
+Negative surface layer thickness in segment 37
+  time step reduced to 1.000 s on day 1.183 at iteration 353
+Computational warning at Julian day = 1.183
+ timestep = 0.800 sec
